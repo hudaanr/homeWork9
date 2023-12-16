@@ -1,11 +1,11 @@
-const config = {
-  dev: {
-    username: "postgres",
-    password: "postgres",
-    database: "coba",
-    host: "localhost",
-    dialect: "postgres",
-  },
-};
+const { Pool } = require("pg")
 
-module.exports = config;
+const pool = new Pool({
+    user: "postgres",
+    host: "localhost",
+    database: "game",
+    password: "postgres",
+    port: 5432
+})
+
+module.exports = pool;
